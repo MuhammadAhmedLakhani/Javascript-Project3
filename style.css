@@ -52,7 +52,7 @@ button {
     height: inherit !important;
 }
 
-.screen > h1 {
+.screen > span {
     font-size: 80px !important;
 }
 

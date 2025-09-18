@@ -20,8 +20,7 @@
                 <div class="row">
                     <div class="col-12 left-top">
 
-                        <div class="d-flex flex-row-reverse align-items-end screen">
-                            <h1>09</h1>   
+                        <div class="d-flex flex-row-reverse align-items-end screen" id="display">
                         </div>
 
 
@@ -34,27 +33,27 @@
 
 
                     </div>
-                    <div class="col-12 left-main">
+                    <div class="col-12 left-main" id="container">
 
                         <div class="row ">
                             <div class="col bg-btn ">
                                 <div class="d-flex justify-content-center align-items-center num">
-                                    <button>%</button>
+                                    <button class="button number" id="per" >%</button>
                                 </div>
                             </div>
                             <div class="col bg-btn ">
                                 <div class="d-flex justify-content-center align-items-center num">
-                                    <button>CE</button>
+                                    <button class="button number" id="canc">CE</button>
                                 </div>
                             </div>
                             <div class="col bg-btn ">
                                 <div class="d-flex justify-content-center align-items-center num">
-                                    <button>C</button>
+                                    <button class="button delete" id="cancelcom">C</button>
                                 </div>
                             </div>
                             <div class="col bg-btn ">
                                 <div class="d-flex justify-content-center align-items-center num">
-                                    <button>
+                                    <button class="button space" id="space">
                                         <span class="material-icons">
                                             backspace
                                         </span>
@@ -67,23 +66,23 @@
                         <div class="row ">
                             <div class="col bg-btn ">
                                 <div class="d-flex justify-content-center align-items-center num">
-                                    <button>1/x</button>
+                                    <button class="button number" id="root">1/x</button>
                                 </div>
                             </div>
                             <div class="col bg-btn ">
                                 <div class="d-flex justify-content-center align-items-center num">
-                                    <button>x<sup>2</sup></button>
+                                    <button class="button number" id="square">x<sup>2</sup></button>
                                 </div>
                             </div>
                             <div class="col bg-btn ">
                                 <div class="d-flex justify-content-center align-items-center num">
-                                    <button><img src="images/math.png  " alt="" width="50" height="40"
+                                    <button class="button number" id="rootcubic"><img src="images/math.png  " alt="" width="50" height="40"
                                             class="root"></button>
                                 </div>
                             </div>
                             <div class="col bg-btn ">
                                 <div class="d-flex justify-content-center align-items-center num">
-                                    <button><img src="images/divide.png  " alt="" width="50" height="40"
+                                    <button class="button operator" id="divide"><img src="images/divide.png  " alt="" width="50" height="40"
                                             class="divide"></button>
                                 </div>
                             </div>
@@ -94,22 +93,22 @@
                         <div class="row ">
                             <div class="col bg-btn ">
                                 <div class="d-flex justify-content-center align-items-center num">
-                                    <button>7</button>
+                                    <button class="button number" id="seven">7</button>
                                 </div>
                             </div>
                             <div class="col bg-btn ">
                                 <div class="d-flex justify-content-center align-items-center num">
-                                    <button>8</button>
+                                    <button class="button number" id="eight">8</button>
                                 </div>
                             </div>
                             <div class="col bg-btn ">
                                 <div class="d-flex justify-content-center align-items-center num">
-                                    <button>9</button>
+                                    <button class="button number" id="nine">9</button>
                                 </div>
                             </div>
                             <div class="col bg-btn ">
                                 <div class="d-flex justify-content-center align-items-center num">
-                                    <button><img src="images/close.png" alt="" width="40" height="50"></button>
+                                    <button class="button operator" id="multiply"><img src="images/close.png" alt="" width="40" height="50"></button>
 
                                 </div>
                             </div>
@@ -119,22 +118,22 @@
                         <div class="row ">
                             <div class="col bg-btn ">
                                 <div class="d-flex justify-content-center align-items-center num">
-                                    <button>4</button>
+                                    <button class="button number" id="four">4</button>
                                 </div>
                             </div>
                             <div class="col bg-btn ">
                                 <div class="d-flex justify-content-center align-items-center num">
-                                    <button>5</button>
+                                    <button class="button number" id="five">5</button>
                                 </div>
                             </div>
                             <div class="col bg-btn ">
                                 <div class="d-flex justify-content-center align-items-center num">
-                                    <button>6</button>
+                                    <button class="button number" id="six">6</button>
                                 </div>
                             </div>
                             <div class="col bg-btn ">
                                 <div class="d-flex justify-content-center align-items-center num">
-                                    <button><img src="images/minus.png " alt="" width="50" height="40"
+                                    <button class="button operator" id="minus"><img src="images/minus.png " alt="" width="50" height="40"
                                             class="divide"></button>
                                 </div>
                             </div>
@@ -145,22 +144,22 @@
                         <div class="row ">
                             <div class="col bg-btn ">
                                 <div class="d-flex justify-content-center align-items-center num">
-                                    <button>1</button>
+                                    <button id="one" class="button number">1</button>
                                 </div>
                             </div>
                             <div class="col bg-btn ">
                                 <div class="d-flex justify-content-center align-items-center num">
-                                    <button>2</button>
+                                    <button class="button number" id="two">2</button>
                                 </div>
                             </div>
                             <div class="col bg-btn ">
                                 <div class="d-flex justify-content-center align-items-center num">
-                                    <button>3</button>
+                                    <button class="button number" id="three">3</button>
                                 </div>
                             </div>
                             <div class="col bg-btn ">
                                 <div class="d-flex justify-content-center align-items-center num">
-                                    <button><img src="images/plus.png " alt="" width="50" height="40"
+                                    <button class="button operator" id="plus"><img src="images/plus.png " alt="" width="50" height="40"
                                             class="divide"></button>
 
                                 </div>
@@ -171,22 +170,22 @@
                         <div class="row ">
                             <div class="col bg-btn ">
                                 <div class="d-flex justify-content-center align-items-center num">
-                                    <button>+/-</button>
+                                    <button class="button number" id="both">+/-</button>
                                 </div>
                             </div>
                             <div class="col bg-btn ">
                                 <div class="d-flex justify-content-center align-items-center num">
-                                    <button>0</button>
+                                    <button class="button number" id="zero">0</button>
                                 </div>
                             </div>
                             <div class="col bg-btn ">
                                 <div class="d-flex justify-content-center align-items-center num">
-                                    <button>.</button>
+                                    <button class="button number" id="dot">.</button>
                                 </div>
                             </div>
                             <div class="col bg-btn ">
                                 <div class="d-flex justify-content-center align-items-center num">
-                                    <button><img src="images/equal.png " alt="" width="50" height="40"
+                                    <button class="button equal" id="equal-i"><img src="images/equal.png " alt="" width="50" height="40"
                                         class="divide"></button>
                                 </div>
                             </div>
@@ -243,7 +242,7 @@
 
 
 
-    <script src="aap.ja"></script>
+    <script src="aap.js"></script>
 </body>
 
 </html>
