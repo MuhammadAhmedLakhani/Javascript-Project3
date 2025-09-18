@@ -1,5 +1,6 @@
 
 
+
 function displayValue(data) {
     console.log("display function running")
     console.log(data, "value")
@@ -10,28 +11,28 @@ function displayValue(data) {
 
     } else {
         console.log("multi value display")
-        
-        
+
+
         var updated = valueDisplay.innerText
-        var newDisplayArray = [];
+        newDisplayArray = [];
         for (var i = 0; i < updated.length; i++) {
             if (updated[i] !== "\n") {
                 newDisplayArray.push(updated[i]);
             }
-            
+
         }
         newDisplayArray.push(data)
         console.log(newDisplayArray)
-        var newDisplayString = "";
-        for(var i = 0; i < newDisplayArray.length; i++){
+        newDisplayString = "";
+        for (var i = 0; i < newDisplayArray.length; i++) {
             newDisplayString += newDisplayArray[i]
         }
-        console.log(newDisplayString,"transform display")
-        
+        console.log(newDisplayString, "transform display")
+
         valueDisplay.innerHTML = "";
 
         valueDisplay.innerHTML += "<span>" + newDisplayString + "<span/>"
-    
+
     }
 
 
@@ -71,7 +72,141 @@ function spaceValue() {
     displayValue(newDisplayString)
 
 
+}
 
+
+function calculate() {
+    console.log(operator)
+
+    console.log(newDisplayArray)
+
+    var operatorIndex = newDisplayArray.indexOf(operator);
+
+    number1 = 0
+    number2 = 0
+    for (var i = 0; i < operatorIndex; i++) {
+
+        number1 += newDisplayArray[i]
+
+    }
+
+    number1 = Number(number1)
+    console.log(number1, "num1")
+
+    newDisplayArray.pop()
+
+    for (var i = operatorIndex + 1; i < newDisplayArray.length; i++) {
+
+        number2 += newDisplayArray[i]
+    }
+
+    number2 = Number(number2)
+    console.log(number2, "num2")
+
+
+
+
+
+
+
+
+
+
+
+    switch (operator) {
+        case "+":
+            console.log("plus operator")
+            result = number1 + number2
+
+            console.log(result, "result")
+
+            displayValue(result)
+
+            historyDisplay()
+
+            break
+        case "-":
+            console.log("minus operator")
+            result = number1 - number2
+
+            console.log(result, "result")
+
+            displayValue(result)
+
+            historyDisplay()
+
+            break
+        case "*":
+            console.log("multiply operator")
+
+            result = number1 * number2
+
+            console.log(result, "result")
+
+            displayValue(result)
+
+            historyDisplay()
+            break
+        case "/":
+            console.log("divide operator")
+
+            result = number1 / number2
+
+            console.log(result, "result")
+
+
+
+            displayValue(result)
+
+            
+            historyDisplay()
+            break
+        case "%":
+            console.log("modulus operator")
+
+
+                result = number1 % number2
+
+                console.log(result,"result")
+
+                displayValue(result)
+
+                historyDisplay()
+
+
+            
+    }
+
+
+
+
+}
+
+
+function historyDisplay() {
+
+    console.log("history function running")
+    historyString = newDisplayString
+
+    historyArray.push(historyString)
+
+    var historyValue = ""
+
+    historyValue = document.getElementById("histID")
+    console.log("presetting")
+
+
+    console.log(historyArray)
+
+    for (his of historyArray) {
+        console.log(his)
+
+        historyValue.innerHTML += "<h1>" + his + "</h1>  <br    >"
+
+
+
+    }
+    historyArray = [];
 
 }
 
@@ -79,14 +214,20 @@ function spaceValue() {
 
 
 
+var newDisplayString = "";
+
+var historyString = "";
+
+var historyArray = []
+
+var number1 = "";
+
+var number2 = "";
+
+var result = 0;
 
 
-
-
-
-
-
-
+var newDisplayArray = [];
 
 var value = "";
 var valueDisplay = document.getElementById("display")
@@ -94,9 +235,9 @@ console.log(valueDisplay.innerText)
 
 var container = document.getElementById("container");
 
+var operator = ""
 
 container.addEventListener("click", (event) => {
-
     var clickedElement = event.target.closest(".button");
     console.log(clickedElement)
 
@@ -115,7 +256,7 @@ container.addEventListener("click", (event) => {
         else if (clickedElement.classList.contains("operator")) {
 
             console.log("The clicked element is operator and id of clicked element is: " + elementId)
-            var operator = ""
+            operator = ""
             switch (elementId) {
                 case "divide":
                     operator = "/"
@@ -129,6 +270,10 @@ container.addEventListener("click", (event) => {
                 case "plus":
                     operator = "+"
                     break
+
+                case "per":
+                    operator = "%"
+
             }
             console.log(operator, "operator value")
             displayValue(operator)
@@ -138,6 +283,7 @@ container.addEventListener("click", (event) => {
             console.log("clicked element is equal operator and the id of it is : " + elementId)
             var equal = "="
             displayValue(equal)
+            calculate()
 
 
         }
